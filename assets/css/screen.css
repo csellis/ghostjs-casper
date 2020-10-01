@@ -1,3 +1,5 @@
+
+
 /* Table of Contents
 /* ------------------------------------------------------------
 
@@ -30,6 +32,11 @@ production stylesheet in assets/built/screen.css
 /* 1. Global - Set up the things
 /* ---------------------------------------------------------- */
 @import "global.css";
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 
 body {
     background: #fff;
@@ -3077,3 +3084,5 @@ Usage (In Ghost editor):
         color: color-mod(var(--green) l(+5%) s(-5%));
     }
 }
+
+
