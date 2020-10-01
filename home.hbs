@@ -30,18 +30,16 @@ into the {body} of the default.hbs template --}}
     {{/foreach}}
     {{/get}}
 </ul> --}}
+<h1></h1>
 
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
     <div class="inner posts">
-        <div class="post-feed">
-            {{#foreach posts}}
-            {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-            {{!-- Don't include #projects --}}
-            {{^has tag="#projects"}}
-            {{> "post-card"}}
-            {{/has}}
-            {{/foreach}}
+        <div class="home-articles">
+            <article>Header</article>
+            <article>Projects</article>
+            <article>Blog</article>
+            <article>Videos</article>
         </div>
     </div>
 </main>
