@@ -1,0 +1,16 @@
+<article class="mt-32 pb-8 border-dashed border-orange-600 border-2">
+
+    {{!-- 
+<ul>
+
+</ul> --}}
+    <section class="post-full-content">
+        <div class="post-content">
+            {{#get "posts" filter="tag:hash-projects"}}
+            {{#foreach posts}}
+            {{> post-card}}
+            {{/foreach}}
+            {{/get}}
+        </div>
+    </section>
+</article>
