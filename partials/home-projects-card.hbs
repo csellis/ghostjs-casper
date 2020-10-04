@@ -1,0 +1,66 @@
+<div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+    <div class="flex-shrink-0">
+        {{#if feature_image}}
+        <a href="{{url}}">
+            <img class="h-48 w-full object-cover" srcset="{{img_url feature_image size="s"}} 300w,
+                    {{img_url feature_image size="m"}} 600w,
+                    {{img_url feature_image size="l"}} 1000w,
+                    {{img_url feature_image size="xl"}} 2000w" sizes="(max-width: 1000px) 400px, 700px" loading="lazy"
+                src="{{img_url feature_image size="m"}}" alt="{{title}}" />
+        </a>
+        {{/if}}
+    </div>
+    <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+        <div class="flex-1">
+            {{#if primary_tag}}
+            {{#primary_tag}}
+            <p class="text-sm leading-5 font-medium text-indigo-600">
+                <a href="#" class="hover:underline">
+                    {{name}}
+                </a>
+            </p>
+            {{/primary_tag}}
+            {{/if}}
+            <a href="{{url}}" class="block">
+                <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">
+                    {{title}}
+                </h3>
+                <p class="mt-3 text-base leading-6 text-gray-500">
+                    {{excerpt words="33"}}
+                </p>
+            </a>
+        </div>
+        <div class="mt-6 flex items-center">
+            {{#foreach authors}}
+            <div class="flex-shrink-0">
+                <a href="#">
+                    {{#if profile_image}}
+                    <img class="h-10 w-10 rounded-full" src="{{img_url profile_image size="xs"}}"
+                        alt=" {{name}}'s Profile Image">
+                    {{else}}
+                    <a href="{{url}}" class="static-avatar author-profile-image">{{> "icons/avatar"}}</a>
+                    {{/if}}
+                </a>
+                <p class="text-sm leading-5 font-medium text-gray-900">
+                    <a href="#" class="hover:underline">
+                        {{name}}
+                    </a>
+                </p>
+            </div>
+            {{/foreach}}
+            <div class="ml-3">
+                <div class="flex text-sm leading-5 text-gray-500">
+                    <time datetime="{{date format="YYYY-MM-DD"}}">
+                        {{date format="D MMM YYYY"}}
+                    </time>
+                    <span class="mx-1">
+                        &middot;
+                    </span>
+                    <span>
+                        {{reading_time}}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

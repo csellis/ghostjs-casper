@@ -45,22 +45,9 @@ into the {body} of the default.hbs template --}}
 
             {{> "home-projects"}}
 
-            {{!-- Don't include #projects --}}
-            <article class="mt-8 pb-8 border-dashed border-2 border-red-400">
-                <h1>
-                    Projects
-                </h1>
-            </article>
-            <article class="mt-8 pb-8 border-dashed border-2 border-red-400">
-                <h1>
-                    Blog
-                </h1>
-            </article>
-            <article class="mt-8 pb-8 border-dashed border-2 border-red-400">
-                <h1>
-                    Videos
-                </h1>
-            </article>
+            {{> "home-blog"}}
+
+            {{> "home-videos"}}
         </div>
     </div>
 </main>
